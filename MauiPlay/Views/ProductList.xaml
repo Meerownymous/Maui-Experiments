@@ -9,6 +9,7 @@
         Margin="10"
         SelectionMode="Single"
         SelectionChanged="productsCollection_SelectionChanged">
+        
         <CollectionView.ItemsLayout>
             <LinearItemsLayout
                 Orientation="Vertical"
@@ -22,17 +23,17 @@
                     <Image HeightRequest="180" Aspect="AspectFill">
                         <Image.Source>
                             <UriImageSource
-                                Uri="{Binding thumbnail}"
+                                Uri="{Binding Thumbnail}"
                                 CacheValidity="00:12:00:00"
                                 >
                             </UriImageSource>
                         </Image.Source>
                     </Image>
                     <HorizontalStackLayout>
-                        <Label Text="{Binding title}" FontSize="Title" FontAttributes="Bold" />
-                        <Label Text="{Binding discountPercentage}" FontSize="Default" Margin="40,4,0,0" FontAttributes="Italic" FontFamily="Open-Sans" />
+                        <Label Text="{Binding Title}" FontSize="Title" FontAttributes="Bold" />
+                        <Label Text="{Binding DiscountPercentage}" FontSize="Default" Margin="40,4,0,0" FontAttributes="Italic" FontFamily="Open-Sans" />
                     </HorizontalStackLayout>
-                    <Label Text="{Binding description}" MaxLines="2" FontSize="Subtitle" TextColor="Gray" />
+                    <Label Text="{Binding Description}" MaxLines="2" FontSize="Subtitle" TextColor="Gray" />
                 </VerticalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
